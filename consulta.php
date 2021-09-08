@@ -16,13 +16,13 @@
 			  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
 				<ul class="navbar-nav">
 				  <li class="nav-item">
-					<a class="btn btn-outline-primary me-2" href="#home">Home</a>
+				  	<a class="btn btn-outline-primary me-2" href="home.php">Home</a>
 				  </li>
 				  <li class="nav-item">
-					<a class="btn btn-outline-primary me-2" href="#incluir">Incluir</a>
+					<a class="btn btn-outline-primary me-2" href="inclusao.php">Incluir</a>
 				  </li>
 				  <li class="nav-item">
-					<a class="btn btn-outline-primary me-2" href="#consultar">Consultar</a>
+					<a class="btn btn-outline-primary me-2" href="consulta.php">Consultar</a>
 				  </li>
 				</ul>
 			  </div>
