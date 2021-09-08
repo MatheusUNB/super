@@ -42,7 +42,7 @@
 
 			<div class="col-md-4">
 				<label for="" class="form-label">MCI</label>
-				<input name="mci" type="number" class="form-control" id="" placeholder="Digite o MCI..." required autofocus>
+				<input name="mci" type="text" class="form-control" id="" placeholder="Digite o MCI..." required autofocus>
 			</div>
 
 			<div class="col-md-4">
@@ -54,13 +54,13 @@
 				<label for="validationEmail" class="form-label">E-mail</label>
 				<div class="input-group">
 				<span class="input-group-text" id="">@</span>
-				<input name="usuario" type="email" class="form-control" id="validationEmail" placeholder="Digite o e-mail..." required>
+				<input name="email" type="email" class="form-control" id="validationEmail" placeholder="Digite o e-mail..." required>
 				</div>
 			</div>
 
 			<div class="col-md-4">
 				<label for="" class="form-label">Telefone</label>
-				<input name="senha" type="text" class="form-control" id="" placeholder="(xx)9xxxx-xxxx" required>
+				<input name="telefone" type="text" class="form-control" id="" placeholder="(xx)9xxxx-xxxx" required>
 			</div>
 			
 			<div class="col-12">
