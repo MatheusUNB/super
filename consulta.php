@@ -41,6 +41,8 @@
 			}
 		</script>
 
+    <script language=javascript type="text/javascript"></script>
+
 	</header>
 
 	<section>
@@ -65,7 +67,7 @@
                         <th scope='col'>Nome</th>
                         <th scope='col'>E-mail</th>
                         <th scope='col'>Telefone</th>
-                        <th scope='col'>Ação</th>
+                        <th scope='col'>Ações</th>
                     </tr>
                 </thead>";
 

@@ -31,6 +31,7 @@
 	</header>
 
 	<section>
+		
 		<div class="d-flex justify-content-center align-items-center mt-5"><h2>Adicionar Contato</h2></div>
 		<form class="row g-3 mx-5 mt-5" action="incluir.php" method="POST">
 
@@ -62,6 +63,7 @@
 			</div>
 
 		</form>
+
 	</section>
 
 </body>
