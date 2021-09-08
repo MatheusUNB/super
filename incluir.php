@@ -7,7 +7,7 @@ $nome = mysqli_real_escape_string($conexao, trim($_POST['nome']));
 $email = mysqli_real_escape_string($conexao, trim($_POST['email']));
 $telefone = mysqli_real_escape_string($conexao, trim($_POST['telefone']));
 
-$sql = "INSERT INTO contato (mci, nome, email, telefone, data_cadastro) VALUES ('$mci', '$nome', '$email', '$telefone', NOW())";
+$sql = "INSERT INTO contatos (mci, nome, email, telefone, data_cadastro) VALUES ('$mci', '$nome', '$email', '$telefone', NOW())";
 
 if($conexao->query($sql) === TRUE) {
     echo '1';

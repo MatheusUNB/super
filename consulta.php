@@ -74,7 +74,7 @@
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
             }
 
-            $result = mysqli_query($con,"SELECT * FROM contato");
+            $result = mysqli_query($con,"SELECT * FROM contatos");
             
             echo "<div class='container'><div class='row justify-content-md-center mt-5'>
             <table class='table table-striped table-dark col-md-6'>
