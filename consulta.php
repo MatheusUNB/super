@@ -31,12 +31,12 @@
 
 		<script language=javascript type="text/javascript">
 			function newPopup(){
-				var resultado = confirm("Deseja excluir o item: " + "itemSelecionado" + " ?");
+				var resultado = confirm("Deseja excluir o contato ?");
 				if (resultado == true) {
-					alert("O item " + "itemSelecionado" + " será excluído da lista!");    
+					alert("O contato será excluído da lista!");
 				}
 				else{
-					alert("Você desistiu de excluir o item " + "itemSelecionado" + " da lista!");
+					alert("Você desistiu de excluir o contato da lista!");
 				}
 			}
 		</script>
@@ -77,14 +77,13 @@
                 echo "<td>" . $row['nome'] . "</td>";
                 echo "<td>" . $row['email'] . "</td>";
                 echo "<td>" . $row['telefone'] . "</td>";
-                echo "<td><a href='javascript:newPopup()'><button type='button' class='btn btn-danger'>" . $row['acao'] . "</button></a></td>";
+                echo "<td><a href='javascript:newPopup()'><button type='submit' class='btn btn-danger'>Excluir</button></form></a>";
                 echo "</tr>";
             }
-            echo "</table></div></div>";
+            echo "</table></div></div>";            
 
             mysqli_close($con);
         ?>
-
 	</section>
 
 </body>
