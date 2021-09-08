@@ -15,6 +15,6 @@ if($conexao->query($sql) === TRUE) {
 
 $conexao->close();
 
-header('Location: home.php');
+header('Location: inclusao.php');
 exit;
 ?>

@@ -30,18 +30,18 @@
 		  </nav>
 
 		<script language=javascript type="text/javascript">
-			function newPopup(){
-				var resultado = confirm("Deseja excluir o contato ?");
+			function newPopup(id){
+        alert(id);
+				var resultado = confirm("Deseja excluir o contato?");
 				if (resultado == true) {
 					alert("O contato será excluído da lista!");
+          
 				}
 				else{
 					alert("Você desistiu de excluir o contato da lista!");
 				}
 			}
 		</script>
-
-    <script language=javascript type="text/javascript"></script>
 
 	</header>
 
@@ -79,7 +79,7 @@
                 echo "<td>" . $row['nome'] . "</td>";
                 echo "<td>" . $row['email'] . "</td>";
                 echo "<td>" . $row['telefone'] . "</td>";
-                echo "<td><a href='javascript:newPopup()'><button type='submit' class='btn btn-danger'>Excluir</button></form></a>";
+                echo "<td><a href='javascript:newPopup(" . $row['usuario_id'] . ")'><button type='button' class='btn btn-danger'>Excluir</button></form></a>";
                 echo "</tr>";
             }
             echo "</table></div></div>";            
