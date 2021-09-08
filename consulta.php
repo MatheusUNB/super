@@ -32,10 +32,10 @@
 
 		<script language=javascript type="text/javascript">
 			function newPopup(id){
-        alert(id);
-				var resultado = confirm("Deseja excluir o contato?");
+        //alert(id);
+				var resultado = confirm("Tem certeza que deseja excluir o contato?");
 				if (resultado == true) {
-					alert("O contato será excluído da lista!");
+					//alert("O contato será excluído da lista!");
           
           $.ajax({
             type: "POST",

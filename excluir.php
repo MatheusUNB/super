@@ -14,6 +14,5 @@ if($conexao->query($sql) === TRUE) {
 
 $conexao->close();
 
-//header('Location: consulta.php');
 exit;
 ?>
