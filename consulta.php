@@ -46,8 +46,8 @@
             },
             success : function(resultado) {
               if (resultado == 1){
-                location.reload();
                 alert("Contato excluído com sucesso!");
+                location.reload();
               }else{
                 alert("Erro ao excluir!");
               }
