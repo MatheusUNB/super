@@ -42,7 +42,7 @@
 
 			<div class="col-md-4">
 				<label for="" class="form-label">MCI</label>
-				<input type="text" class="form-control" id="" placeholder="Digite o MCI..." required autofocus>
+				<input name="mci" type="number" class="form-control" id="" placeholder="Digite o MCI..." required autofocus>
 			</div>
 
 			<div class="col-md-4">

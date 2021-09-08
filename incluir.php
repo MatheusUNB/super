@@ -2,11 +2,12 @@
 session_start();
 include("conexao.php");
 
+$mci = mysqli_real_escape_string($conexao, trim($_POST['mci']));
 $nome = mysqli_real_escape_string($conexao, trim($_POST['nome']));
 $usuario = mysqli_real_escape_string($conexao, trim($_POST['usuario']));
-$senha = mysqli_real_escape_string($conexao, trim(md5($_POST['senha'])));
+$senha = mysqli_real_escape_string($conexao, trim($_POST['senha']));
 
-$sql = "select count(*) as total from contato where contato = '$nome'";
+$sql = "select count(*) as total from contato where contato = '$mci'";
 $result = mysqli_query($conexao, $sql);
 $row = mysqli_fetch_assoc($result);
 
@@ -16,7 +17,7 @@ if($row['total'] == 1) {
 	exit;
 }
 
-$sql = "INSERT INTO contato (nome, usuario, senha, data_cadastro) VALUES ('$nome', '$usuario', '$senha', NOW())";
+$sql = "INSERT INTO contato (mci, nome, usuario, senha, data_cadastro) VALUES ('$mci', '$nome', '$usuario', '$senha', NOW())";
 
 if($conexao->query($sql) === TRUE) {
 	$_SESSION['status_cadastro'] = true;
