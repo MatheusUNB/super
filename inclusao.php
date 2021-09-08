@@ -28,12 +28,6 @@
 			  </div>
 			</div>
 		  </nav>
-
-		  <script language=javascript type="text/javascript">
-			function newPopup(){
-				alert("Inclusão efetuada com sucesso!");
-			}
-		</script>
 	</header>
 
 	<section>
@@ -64,7 +58,7 @@
 			</div>
 			
 			<div class="col-12">
-			<a href="javascript:newPopup()"><button type="submit" class="btn btn-primary" type="submit">Adicionar</button></a>
+				<button type="submit" class="btn btn-primary" type="submit">Adicionar</button>
 			</div>
 
 		</form>

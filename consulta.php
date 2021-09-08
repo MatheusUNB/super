@@ -45,55 +45,45 @@
 
 	<section>
 		<div class="d-flex justify-content-center align-items-center mt-5"><h2>Lista de Contatos</h2></div>
-		
-		<div class="container">
-			<div class="row justify-content-md-center mt-5">
-				<table class="table table-striped table-dark col-md-6">
-					<thead>
-					<tr>
-						<th scope="col">#</th>
-						<th scope="col">MCI</th>
-						<th scope="col">Nome</th>
-						<th scope="col">E-mail</th>
-						<th scope="col">Telefone</th>
-						<th scope="col">Ação</th>
-					</tr>
-					</thead>
-					<tbody>
-					<tr>
-						<th scope="row">1</th>
-						<td>123</td>
-						<td>A</td>
-						<td>a@bb.com.br</td>
-						<td>(61)99999-9999</td>
-						<td>
-							<a href="javascript:newPopup()"><button type="button" class="btn btn-danger">Excluir</button></a>
-						</td>
-					</tr>
-					<tr>
-						<th scope="row">2</th>
-						<td>456</td>
-						<td>B</td>
-						<td>b@bb.com.br</td>
-						<td>(61)99999-9999</td>
-						<td>
-							<a href="javascript:newPopup()"><button type="button" class="btn btn-danger">Excluir</button></a>
-						</td>
-					</tr>
-					<tr>
-						<th scope="row">3</th>
-						<td>789</td>
-						<td>C</td>
-						<td>c@bb.com.br</td>
-						<td>(61)99999-9999</td>
-						<td>
-							<a href="javascript:newPopup()"><button type="button" class="btn btn-danger">Excluir</button></a>
-						</td>
-					</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>		
+        
+        <?php
+            $con=mysqli_connect("127.0.0.1","root","","super");
+            // Check connection
+            if (mysqli_connect_errno())
+            {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+            }
+
+            $result = mysqli_query($con,"SELECT * FROM contato");
+            
+            echo "<div class='container'><div class='row justify-content-md-center mt-5'>
+            <table class='table table-striped table-dark col-md-6'>
+                <thead>
+                    <tr>
+                        <th scope='col'>#</th>
+                        <th scope='col'>MCI</th>
+                        <th scope='col'>Nome</th>
+                        <th scope='col'>E-mail</th>
+                        <th scope='col'>Telefone</th>
+                        <th scope='col'>Ação</th>
+                    </tr>
+                </thead>";
+
+            while($row = mysqli_fetch_array($result))
+            {
+                echo "<tr>";
+                echo "<td>" . $row['usuario_id'] . "</td>";
+                echo "<td>" . $row['mci'] . "</td>";
+                echo "<td>" . $row['nome'] . "</td>";
+                echo "<td>" . $row['email'] . "</td>";
+                echo "<td>" . $row['telefone'] . "</td>";
+                echo "<td><a href='javascript:newPopup()'><button type='button' class='btn btn-danger'>" . $row['acao'] . "</button></a></td>";
+                echo "</tr>";
+            }
+            echo "</table></div></div>";
+
+            mysqli_close($con);
+        ?>
 
 	</section>
 
